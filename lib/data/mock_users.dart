@@ -19,4 +19,9 @@ const MOCK_USERS = {
       email: 'erisvaldo@email.com',
       avatarUrl:
           'https://www.pngkey.com/png/full/115-1150420_avatar-png-pic-male-avatar-icon-png.png'),
+  '4': const User(
+    id: '4',
+    name: 'Sem Avatar',
+    email: 'erisvaldo@email.com',
+  ),
 };
