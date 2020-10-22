@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:users_todo/data/mock_users.dart';
+import 'package:provider/provider.dart';
+import 'package:users_todo/providers/user_provider.dart';
 import 'package:users_todo/views/components/user_tile.dart';
 
 class UserList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final users = {...MOCK_USERS};
+    final UserProvider users = Provider.of(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -19,9 +20,8 @@ class UserList extends StatelessWidget {
         ],
       ),
       body: ListView.builder(
-        itemCount: users.length,
-        itemBuilder: (context, indice) =>
-            UserTile(users.values.elementAt(indice)),
+        itemCount: users.count,
+        itemBuilder: (context, indice) => UserTile(users.byIndex(indice)),
       ),
     );
   }
