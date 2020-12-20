@@ -21,7 +21,10 @@ class UserList extends StatelessWidget {
       ),
       body: ListView.builder(
         itemCount: users.count,
-        itemBuilder: (context, indice) => UserTile(users.byIndex(indice)),
+        itemBuilder: (context, indice) => UserTile(
+          users.byIndex(indice),
+        ),
+        scrollDirection: Axis.vertical,
       ),
     );
   }

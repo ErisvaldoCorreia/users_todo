@@ -12,25 +12,28 @@ class UserTile extends StatelessWidget {
         : CircleAvatar(
             backgroundImage: NetworkImage(user.avatarUrl),
           );
-    return ListTile(
-      leading: avatar,
-      title: Text(user.name),
-      subtitle: Text(user.email),
-      trailing: Container(
-        width: 100.0,
-        child: Row(
-          children: [
-            IconButton(
-              icon: Icon(Icons.edit),
-              color: Colors.green,
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.delete),
-              color: Colors.red,
-              onPressed: () {},
-            ),
-          ],
+    return Padding(
+      padding: const EdgeInsets.only(left: 12.0),
+      child: ListTile(
+        leading: avatar,
+        title: Text(user.name),
+        subtitle: Text(user.email),
+        trailing: Container(
+          width: 100.0,
+          child: Row(
+            children: [
+              IconButton(
+                icon: Icon(Icons.edit),
+                color: Colors.green,
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(Icons.delete),
+                color: Colors.red,
+                onPressed: () {},
+              ),
+            ],
+          ),
         ),
       ),
     );

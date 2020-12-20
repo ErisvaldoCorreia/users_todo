@@ -17,11 +17,13 @@ const MOCK_USERS = {
     id: '3',
     name: 'Junior',
     email: 'erisvaldo@email.com',
+    avatarUrl: '',
   ),
   '4': const User(
     id: '4',
     name: 'Sem Avatar',
     email: 'erisvaldo@email.com',
+    avatarUrl: '',
   ),
   '5': const User(
       id: '5',
